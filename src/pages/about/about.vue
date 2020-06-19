@@ -1,10 +1,12 @@
 <template>
   <div class="about">
+    <!-- 顶部栏 -->
     <van-nav-bar
         title="关于"
         left-arrow
         @click-left="onClickLeft"
     />
+    <!-- 内容 -->
     <van-cell title="隐私条例" is-link bind:click="showPopup" />
     <van-cell title="用户协议" is-link bind:click="showPopup" />
   </div>
@@ -22,7 +24,7 @@
       }
     },
     methods:{
-       onClickLeft(){
+       onClickLeft(){//返回上一页面
           this.$router.go(-1);
       }
     },
@@ -55,6 +57,14 @@ body{
   .van-cell{
     font-size:rem(26);
     padding:rem(28) rem(33);
+  }
+  .van-nav-bar .van-icon{
+    color:#333 !important;
+    line-height: rem(90);
+  }
+   .van-nav-bar__arrow{
+      font-size:rem(24);
+      
   }
 }
 </style>

@@ -8,7 +8,7 @@
     <div class="wrapper">
         <div class="pic">
             <p>头像</p>
-            <img src="../../assets/img/组 916@2x.png" alt="">
+            <img src="../../assets/img/heard_pic.png" alt="">
         </div>
         <div class="data">
             <div class="dataInp">
@@ -85,6 +85,14 @@ body{
     }
     .van-nav-bar__title{
     font-size:rem(24);
+  }
+  .van-nav-bar .van-icon{
+    color:#333 !important;
+    line-height: rem(90);
+  }
+   .van-nav-bar__arrow{
+      font-size:rem(24);
+      
   }
   .wrapper{
       padding:0 rem(53);

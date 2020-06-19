@@ -1,12 +1,14 @@
 <template>
   <div class="help">
+    <!-- 顶部栏 -->
     <van-nav-bar
         title="帮助"
         left-arrow
         @click-left="onClickLeft"
     />
+    <!-- 内容 -->
     <div class="content">
-        <img src="../../assets/img/686187de190b74aef2c9a3ceb9a7300.png" />
+        <img src="../../assets/img/help.png" />
     </div>
   </div>
 </template>
@@ -23,7 +25,7 @@
       }
     },
     methods:{
-      onClickLeft(){
+      onClickLeft(){//返回上一页面
           this.$router.go(-1);
       }
     },
@@ -50,6 +52,14 @@
     }
   .van-nav-bar__title{
     font-size:rem(24);
+  }
+  .van-nav-bar .van-icon{
+    color:#333 !important;
+    line-height: rem(90);
+  }
+   .van-nav-bar__arrow{
+      font-size:rem(24);
+      
   }
 .content{
     width:100%;

@@ -3,37 +3,41 @@
    
     <div class="wrapper">
         <div class="nav">
-            <span class="app" @click="my"></span>
+            <!-- 进入个人中心图标 -->
+            <span class="app" @click="my"></span> 
+            <!-- 进入添加电箱图标 -->
             <span class="more" @click="add"></span>
         </div>
+        <!-- LOGO -->
         <div class="icon">
-            <img src="../../assets/img/组 869@2x.png"/>
+            <img src="../../assets/img/icon_house.png"/>
             <p>有新智能用电</p>
         </div>
+        <!-- 首页功能列表 -->
         <div class="content">
             <ul>
                 <li @click="myBox">
-                    <img src="../../assets/img/组 891@2x.png" />
+                    <img src="../../assets/img/pic_pc.png" />
                     <p>智能终端</p>
                 </li>
                 <li @click="myBox">
-                    <img src="../../assets/img/组 895@2x.png" />
+                    <img src="../../assets/img/pic_clock.png" />
                     <p>定时控制</p>
                 </li>
                 <li @click="myBox">
-                    <img src="../../assets/img/组 906@2x.png" />
+                    <img src="../../assets/img/pic_Ele.png" />
                     <p>电量</p>
                 </li>
                 <li @click="myBox">
-                    <img src="../../assets/img/组 887@2x.png" />
+                    <img src="../../assets/img/pic_key.png" />
                     <p>一键开关</p>
                 </li>
                 <li @click="myBox">
-                    <img src="../../assets/img/组 881@2x.png" />
+                    <img src="../../assets/img/pic_search.png" />
                     <p>漏报自查</p>
                 </li>
                 <li @click="myBox">
-                    <img src="../../assets/img/组 876@2x.png" />
+                    <img src="../../assets/img/pic_save.png" />
                     <p>安全信息</p>
                 </li>
              
@@ -55,13 +59,13 @@
       }
     },
     methods:{
-      add(){
+      add(){//跳转添加页面
           this.$router.push({path:"/add"})
       },
-      my(){
+      my(){//跳转个人中心页面
           this.$router.push({path:"/my"})
       },
-      myBox(){
+      myBox(){//跳转我的电箱页面
           this.$router.push({path:"/myBox"})
       }
     },

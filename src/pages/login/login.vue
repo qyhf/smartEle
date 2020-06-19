@@ -101,8 +101,11 @@ $font:rem(24);
     color:#fff;
   }
 }
+html{
+  height:100%;
+}
 body{
-    height:100%;
+  height:100%;
 }
 #app{
   height:100%;
@@ -114,6 +117,7 @@ body{
   background-repeat: no-repeat;
   background-size:100% 100%;
   .wrapper{
+   
       .top{
           p{
             font-family: "SimSun";

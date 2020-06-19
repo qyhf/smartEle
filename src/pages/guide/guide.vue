@@ -1,23 +1,26 @@
 <template>
   <div class="guide">
+    <!-- 顶部栏 -->
        <van-nav-bar
         title="使用指南"
         left-arrow
         @click-left="onClickLeft"
     />
+    
       <div class="content">
+        <!-- 轮播图 -->
           <van-swipe class="my-swipe" indicator-color="#009be1" show-indicators>
     <van-swipe-item>
-        <img src="../../assets/img/组 921@2x.png" />
+        <img src="../../assets/img/gui_login.png" />
     </van-swipe-item>
     <van-swipe-item>
-        <img src="../../assets/img/组 922@2x.png" />
+        <img src="../../assets/img/gui_index.png" />
     </van-swipe-item>
     <van-swipe-item>
-        <img src="../../assets/img/组 923@2x.png" />
+        <img src="../../assets/img/gui_add.png" />
     </van-swipe-item>
     <van-swipe-item>
-        <img src="../../assets/img/更多功能 – 1@2x.png" />
+        <img src="../../assets/img/gui_myBox.png" />
     </van-swipe-item>
 </van-swipe>
       </div>
@@ -37,7 +40,7 @@
       }
     },
     methods:{
-      onClickLeft(){
+      onClickLeft(){//返回上一页面
           this.$router.go(-1);
       }
     },
@@ -72,6 +75,14 @@ body{
   }
   .van-nav-bar{
       background-color:#f8f8f8;
+  }
+   .van-nav-bar .van-icon{
+    color:#333 !important;
+    line-height: rem(90);
+  }
+   .van-nav-bar__arrow{
+      font-size:rem(24);
+      
   }
   img{
       display:block;

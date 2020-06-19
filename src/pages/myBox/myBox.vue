@@ -1,29 +1,34 @@
 <template>
   <div class="myBox">
+      <!-- 头部部分 -->
     <div class="heard">
         <van-nav-bar
         title="我的电箱"
         left-arrow
         @click-left="onClickLeft"
     />
+    <h1>{{$store.state.bmtab}}</h1>
+    <!-- 搜索框 -->
     <div class="search">
-        <span></span>
-        <input type="text" placeholder="请输入设备号和名称搜索">
+        <span @click="search"></span>
+        <input type="text" v-model="value" placeholder="请输入设备号和名称搜索">
     </div>
-    <div class="content">
+    <!-- 电箱信息 -->
+    <div  class="content" v-for="(item,index) in $store.state.box" :key="index">
         <div class="top">
-            <p>研发中心</p>
-            <span>80146544655  广州</span>
+            <p>{{item.name}}</p>
+            <span>{{item.num}}  {{item.city}}</span>
             <i></i>
         </div>
         <div class="down">
             <p class="password">修改密码</p>
             <p class="internet">修改网络</p>
         </div>
-        <div class="btn">
+        
+    </div>
+    <div class="btn">
             <button @click="add">添加新电箱</button>
         </div>
-    </div>
     </div>
   </div>
 </template>
@@ -36,15 +41,21 @@
   export default {
     data(){
       return {
-        
+        value:""
       }
     },
     methods:{
-       onClickLeft(){
+       onClickLeft(){//返回上一个页面
           this.$router.go(-1);
       },
-      add(){
+      add(){//跳转到添加电箱页面
           this.$router.push({path:"/add"})
+        
+      },
+      search(){//搜索功能
+          this.isSearch="";
+          this.isBox="active";
+          this.$store.commit("search",this.value)
       }
     },
 
@@ -108,10 +119,12 @@ body{
             .top{
                 position:relative;
                 p{
+                    display:block;
                     font-size:rem(27);
                     color:#333;
-                    padding-top:rem(38);
+                    padding-top:rem(30);
                     margin-bottom:0;
+                    height:rem(72);
                 }
                 span{
                     display:block;
@@ -119,6 +132,8 @@ body{
                     font-size:rem(18);
                     margin-bottom:rem(27);
                     border-bottom:1px solid #e2e2e2;
+                    height:rem(70);
+                    line-height: rem(70);
                 }
                 i{
                     display:block;
@@ -149,7 +164,12 @@ body{
                     border-left:1px solid #e2e2e2;
                 }
             }
-            .btn{
+            
+        }
+        #active{
+            display:none;
+        }
+        .btn{
                 margin:rem(636) rem(79) 0;
                 button{
                     display:block;
@@ -163,7 +183,6 @@ body{
                     border-radius:rem(128);
                 }
             }
-        }
     }
     .van-nav-bar{
         height:rem(90);
@@ -180,6 +199,11 @@ body{
   }
   .van-nav-bar .van-icon{
       color:#fff !important;
+  }
+  .van-nav-bar__arrow{
+      font-size:rem(24);
+      line-height: rem(90);
+      
   }
 }
 </style>

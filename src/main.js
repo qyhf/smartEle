@@ -6,6 +6,7 @@ import router from './router'
 import Vuex from 'vuex'
 import Mint from 'mint-ui'
 import Vant from 'vant';
+import store from "./store/store"
 
 import 'vant/lib/index.css';
 import 'mint-ui/lib/style.css'
@@ -28,11 +29,11 @@ Vue.use(Vant)
 
 window.bus = new Vue();
 
-var store = new Vuex.Store({
-	state: {
-    bmTab: 1,
-  }
-})
+// var store = new Vuex.Store({
+// 	state: {
+//     bmTab: 1,
+//   }
+// })
 
 /* eslint-disable no-new */
 new Vue({

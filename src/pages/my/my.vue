@@ -2,14 +2,14 @@
   <div class="my">
     <div class="heard">
         <div class="pic">
-            <img @click="data" src="../../assets/img/组 916@2x.png" />
+            <img @click="data" src="../../assets/img/heard_pic.png" />
             <p>138999999999</p>
         </div>
     </div>
     <div class="content">
         <div class="cont">
             <div class="left">
-                <img src="../../assets/img/组 912@2x.png" />
+                <img src="../../assets/img/my_index.png" />
             </div>
             <div class="right">
                 <van-cell title="主界面" is-link @click="myData" />
@@ -18,7 +18,7 @@
     
         <div class="contGui">
             <div class="left">
-                <img src="../../assets/img/组 911@2x.png" />
+                <img src="../../assets/img/my_guide.png" />
             </div>
             <div class="right">
                 <van-cell title="APP使用指南" is-link @click="guide" />
@@ -26,7 +26,7 @@
         </div>
         <div class="contHelp">
             <div class="left">
-                <img src="../../assets/img/组 910@2x.png" />
+                <img src="../../assets/img/my_help.png" />
             </div>
             <div class="right">
                 <van-cell title="帮助" is-link @click="help" />
@@ -34,7 +34,7 @@
         </div>
         <div class="contAbout">
             <div class="left">
-                <img src="../../assets/img/组 908@2x.png" />
+                <img src="../../assets/img/my_about.png" />
             </div>
             <div class="right">
                 <van-cell title="关于" is-link @click="about" />
